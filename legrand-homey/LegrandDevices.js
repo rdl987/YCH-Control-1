@@ -117,7 +117,7 @@ class LegrandDevices {
         }, 500);
     }
     static async onCapabilityChange(HomeyDevice, capabilityValues) {
-        return new Promise((resolve, reject) => {
+       return new Promise((resolve, reject) => {
             HomeyDevice.homey.app.legrandBuffer.postRequestBuffer(HomeyDevice.data, capabilityValues).then(res => {
                 resolve(res);
             }).catch(err => reject(err));
